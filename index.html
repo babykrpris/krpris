@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" href="https://cdn.discordapp.com/emojis/1456496256976420864.webp?size=96">
+<link rel="stylesheet" href="estilos.css">
+
+<script src="https://kit.fontawesome.com/eb9af641fe.js" crossorigin="anonymous"></script>
+
+<title>@|</title>
+</head>
+
+<body>
+
+<script>
+let prefixo = "@";
+let text = "krpris";
+let i = 0;
+
+let apagando = false;
+let pausando = false;
+
+let cursorVisivel = true;
+let piscadas = 0;
+let maxPiscadas = 6;
+
+function animarTitulo() {
+    let cursor = cursorVisivel ? "|" : " ";
+    cursorVisivel = !cursorVisivel;
+
+    if (!apagando && !pausando) {
+        document.title = prefixo + text.substring(0, i) + cursor;
+        i++;
+
+        if (i > text.length) {
+            i = text.length;
+            pausando = true;
+            piscadas = 0;
+            return setTimeout(animarTitulo, 300);
+        }
+
+    } else if (pausando) {
+        document.title = prefixo + text + cursor;
+        piscadas++;
+
+        if (piscadas >= maxPiscadas) {
+            pausando = false;
+            apagando = true;
+            i = text.length;
+        }
+
+    } else {
+        i--;
+        document.title = prefixo + text.substring(0, i) + cursor;
+
+        if (i <= 0) {
+            pausando = true;
+            piscadas = 0;
+            apagando = false;
+            i = 0;
+        }
+    }
+
+    setTimeout(animarTitulo, 600);
+}
+
+animarTitulo();
+</script>
+
+<div class="card">
+
+  <div class="topo"></div>
+
+  <img src="https://media.discordapp.net/attachments/1493722049569358036/1493722087251116072/image.png?ex=69e00099&is=69deaf19&hm=3b8351d82774089323abbdd84de638a7b9cf986fec823dee2e043c9fa64d0606&=&format=webp&quality=lossless" class="perfil">
+
+  <div class="conteudo">
+    <h2>krpris</h2>
+    <p>u were born an original, don’t die a copy.</p>
+
+    <hr>
+
+    <div class="icons">
+      <a href="https://www.youtube.com/@krpris" target="_blank">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+
+      <a href="https://discord.gg/utdzwnmBCn" target="_blank">
+        <i class="fa-brands fa-discord"></i>
+      </a>
+
+      <a href="https://www.tiktok.com/@krpris" target="_blank">
+        <i class="fa-brands fa-tiktok"></i>
+      </a>
+
+      <a href="https://www.instagram.com/krpris_" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+
+      <a href="https://open.spotify.com/" target="_blank">
+        <i class="fa-brands fa-spotify"></i>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

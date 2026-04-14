@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: url(https://media.discordapp.net/attachments/1493722049569358036/1493722144549376000/image.png?ex=69e000a7&is=69deaf27&hm=b104bdb3ac76292f096fe300aba462cef2d4c8b36d093e15d70db076ea8cd102&=&format=webp&quality=lossless&width=1296&height=864) center/cover no-repeat;
+}
+
+.card {
+  width: 320px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+
+  text-align: center;
+  color: white;
+}
+
+.topo {
+  height: 100px;
+  background: url(https://media.discordapp.net/attachments/1493722049569358036/1493722237570908171/banner.gif?ex=69e000bd&is=69deaf3d&hm=5979a284a1ac191fccdb81a7f3b2f658acfe4198d7b140d2d60ac0b426084e29&=) center/cover no-repeat;
+}
+
+.perfil {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border: 3px solid rgba(255,255,255,0.7);
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+}
+
+.conteudo {
+  padding: 60px 20px 20px;
+}
+
+h2 {
+  margin: 10px 0 5px;
+}
+
+p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: rgba(255,255,255,0.2);
+  margin: 15px 0;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.icons i {
+  font-size: 26px;
+  color: white;
+  transition: 0.3s;
+}
+
+.icons i:hover {
+  transform: scale(1.2);
+  color: #000;
+}
