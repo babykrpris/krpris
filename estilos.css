@@ -5,7 +5,7 @@ body {
   justify-content: center;
   align-items: center;
 
-  background: url(https://media.discordapp.net/attachments/1493722049569358036/1493722144549376000/image.png?ex=69e000a7&is=69deaf27&hm=b104bdb3ac76292f096fe300aba462cef2d4c8b36d093e15d70db076ea8cd102&=&format=webp&quality=lossless&width=1296&height=864) center/cover no-repeat;
+  background: url() center/cover no-repeat;
 }
 
 .card {
@@ -27,7 +27,7 @@ body {
 
 .topo {
   height: 100px;
-  background: url(https://media.discordapp.net/attachments/1493722049569358036/1493726850164326641/banner2.gif?ex=69e00509&is=69deb389&hm=7e28bc7435dfe3154a9bdbe7431a08831758152efe0534d9f7823471a06d6d55&=) center/cover no-repeat;
+  background: url() center/cover no-repeat;
 }
 
 .perfil {
